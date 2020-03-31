@@ -1,4 +1,4 @@
-import numpy.random as np
+import random
 
 def printBoard():
 	print((board[1] + '|' + board[2] + '|' + board[3]).center(140))
@@ -30,7 +30,7 @@ def compMove():
 	for i in range(1,10):
 		if board[i] == ' ':
 			l.append(i)
-	insLetter('O',np.choice(l))
+	insLetter('O',random.choice(l))
 	
 
 def isWinner(board,letter):
