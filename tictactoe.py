@@ -66,7 +66,7 @@ while(board.count(' ') > 1):
 		flag = 1
 		break
 
-if flag == 1:
+if flag == 0:
 	if board.count(' ') == 1:
 		print("Draw !!!")
 
