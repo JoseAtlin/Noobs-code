@@ -48,12 +48,14 @@ print("\n\n")
 board = [' ']*10
 printBoard()
 
+flag = 0
 while(board.count(' ') > 1):
 	if not(isWinner(board,'O')):
 		playerMove()
 		printBoard()
 	else:
 		print("Better luck next time kid ;)")
+		flag = 1
 		break
 	
 	if not(isWinner(board,'X')):
@@ -61,8 +63,10 @@ while(board.count(' ') > 1):
 		printBoard()
 	else:
 		print("You won Mhhan !!")
+		flag = 1
 		break
 
-if board.count(' ') == 1:
-	print("Draw !!!")
+if flag == 1:
+	if board.count(' ') == 1:
+		print("Draw !!!")
 
