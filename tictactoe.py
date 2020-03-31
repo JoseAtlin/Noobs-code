@@ -55,7 +55,7 @@ while(1):
 			playerMove()
 			printBoard()
 		else:
-			print("Better luck next time kid ;)")
+			print("Sry,Better luck next time kid".center(140))
 			flag = 1
 			break
 
@@ -63,7 +63,7 @@ while(1):
 			compMove()
 			printBoard()
 		else:
-			print("You won Mhhan !!")
+			print("You won Mhhan !!".center(140))
 			flag = 1
 			break
 
