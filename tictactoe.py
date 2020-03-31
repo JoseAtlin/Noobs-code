@@ -41,10 +41,10 @@ def isWinner(board,letter):
 pattern = [('.|.'*(2*i + 1)).center(140,'-') for i in range(5//2)]
 print('\n'.join(pattern + ['WELCOME TO TIC TAC TOE'.center(140, '-')] + pattern[::-1]))
 
-print("\n\n")
+print("\n")
 print(("Lets Play !!").center(140))
-print("You are \'x\' and computer picks \'O\'\n".center(140))
-print("\n\n")
+print("You are \'x\' and computer picks \'O\'".center(140))
+print("\n")
 
 while(1):
 	flag = 0
