@@ -14,7 +14,7 @@ def free(pos):
 
 def playerMove():
 	while(1):
-		place = int(raw_input("Enter a position to place \'X\' between 1 - 9 only : "))
+		place = int(input("Enter a position to place \'X\' between 1 - 9 only : "))
 		if place < 10 and place > 0:
 			if free(place):	
 				insLetter('X',place)
