@@ -45,28 +45,35 @@ print("\n\n")
 print(("Lets Play !!").center(140))
 print("You are \'x\' and computer picks \'O\'\n".center(140))
 print("\n\n")
-board = [' ']*10
-printBoard()
 
-flag = 0
-while(board.count(' ') > 1):
-	if not(isWinner(board,'O')):
-		playerMove()
-		printBoard()
-	else:
-		print("Better luck next time kid ;)")
-		flag = 1
-		break
+while(1):
+	flag = 0
+	board = [' ']*10
+	printBoard()
+	while(board.count(' ') > 1):
+		if not(isWinner(board,'O')):
+			playerMove()
+			printBoard()
+		else:
+			print("Better luck next time kid ;)")
+			flag = 1
+			break
+
+		if not(isWinner(board,'X')):
+			compMove()
+			printBoard()
+		else:
+			print("You won Mhhan !!")
+			flag = 1
+			break
+
+	if flag == 0:
+		if board.count(' ') == 1:
+			print("Draw !!!")
 	
-	if not(isWinner(board,'X')):
-		compMove()
-		printBoard()
-	else:
-		print("You won Mhhan !!")
-		flag = 1
+	print("Do you wish to Restart the game?".center(140))
+	print("Press 1.Restart 2.Exit".center(140))
+	ch = int(input("Enter your choice : "))
+	if ch == 2:
 		break
-
-if flag == 0:
-	if board.count(' ') == 1:
-		print("Draw !!!")
 
