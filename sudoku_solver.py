@@ -1,17 +1,17 @@
 import numpy as np
 
 def printGrid():
-	print(' '.join(str(rm[0])).replace('[','').replace(']','').center(140))
-	print(' '.join(str(rm[1])).replace('[','').replace(']','').center(140))
-	print(' '.join(str(rm[2])).replace('[','').replace(']','').center(140))
+	print(' '.join(str(row_matrix[0])).replace('[','').replace(']','').center(140))
+	print(' '.join(str(row_matrix[1])).replace('[','').replace(']','').center(140))
+	print(' '.join(str(row_matrix[2])).replace('[','').replace(']','').center(140))
 	print(('-'*35).center(140))
-	print(' '.join(str(rm[3])).replace('[','').replace(']','').center(140))
-	print(' '.join(str(rm[4])).replace('[','').replace(']','').center(140))
-	print(' '.join(str(rm[5])).replace('[','').replace(']','').center(140))
+	print(' '.join(str(row_matrix[3])).replace('[','').replace(']','').center(140))
+	print(' '.join(str(row_matrix[4])).replace('[','').replace(']','').center(140))
+	print(' '.join(str(row_matrix[5])).replace('[','').replace(']','').center(140))
 	print(('-'*35).center(140))
-	print(' '.join(str(rm[6])).replace('[','').replace(']','').center(140))
-	print(' '.join(str(rm[7])).replace('[','').replace(']','').center(140))
-	print(' '.join(str(rm[8])).replace('[','').replace(']','').center(140))
+	print(' '.join(str(row_matrix[6])).replace('[','').replace(']','').center(140))
+	print(' '.join(str(row_matrix[7])).replace('[','').replace(']','').center(140))
+	print(' '.join(str(row_matrix[8])).replace('[','').replace(']','').center(140))
 
 def checkRow(pos):
 	not_possible[pos] = list(set(np.append(not_possible[pos],row_matrix[pos//9]).astype(int))) 
@@ -58,7 +58,6 @@ not_possible = [[]]*81					#creating 81 lists, as there are 81 spots in a Sudoku
 
 print('\n')
 print("The given Sudoku Grid :\n".center(140))
-rm = row_matrix
 printGrid()
 
 i = 0
@@ -87,7 +86,5 @@ while(1):						#looping until the matrix has no 0's i.e. blanks left
 
 print('\n')
 print("Solved Sudoku : \n".center(140))
-rm = row_matrix
 printGrid()
-
 
