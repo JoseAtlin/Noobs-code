@@ -46,7 +46,7 @@ def play(attempts,length,word,user):
 				print("Ooops.. {} is not in the word\n".format(letter).center(140))	
 
 			if count == len(word):
-				print("You've Won !! Great Job...")
+				print("You've Won !! Great Job...".center(140))
 				break
 
 			if attempts == 1:
