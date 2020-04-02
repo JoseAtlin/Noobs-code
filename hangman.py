@@ -1,9 +1,11 @@
 import random
 
 def start():
-	attempts = int(input("Enter the no. of attempts needed : "))
 	f = open('dictionary.txt',mode='r')			
 	length = int(input("Pick the size of word between \'4\' - \'10\' : "))
+	attempts = int(input("Enter the no. of attempts needed : "))
+	if attempts < length:
+		print("Can you solve this?? {} < {} Good Luck".format(attempts,length).center(140))
 
 	words = []
 	for line in f:
@@ -17,6 +19,7 @@ def start():
 
 def play(attempts,length,word,user):
 	guess = []
+	symbols = ['!','@','#','$','%','^','&','*','(',')','_','-','+','=','/','`','~']
 	while(1):
 		count = 0
 		while(attempts > 0):
@@ -29,10 +32,16 @@ def play(attempts,length,word,user):
 				print("Previous Guesses : {}".format(' '.join(guess)))
 
 			letter = input("Choose a letter : ").lower()
-
 			if len(letter) > 1:
-				print("choose a letter !!")
+				print("choose only a letter, No words".center(140,'-'))
 				continue
+			if letter.isdigit():
+				print("Choose only a letter, No Numbers".center(140,'-'))
+				continue
+			if letter in symbols:
+				print("Choose only a letter, No symbols".center(140,'-'))
+				continue
+
 			for i in range(len(word)):
 				if word[i] == letter:
 					user[i] = letter
