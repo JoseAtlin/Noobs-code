@@ -46,11 +46,12 @@ def play(attempts,length,word,user):
 				print("Ooops.. {} is not in the word\n".format(letter).center(140))	
 
 			if count == len(word):
-				print("You've Won !! Great Job...".center(140))
+				print("You've Won !! Great Job...".center(140,'-'))
+				print('\n')
 				break
 
 			if attempts == 1:
-				print("Ooops you are out of moves :(".center(140))
+				print("Ooops you are out of moves :(".center(140,'-'))
 				print("Better luck next time\n".center(140))
 				print("Word was : {}".format(''.join(word)).rjust(140))
 			attempts -= 1
