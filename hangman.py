@@ -20,7 +20,6 @@ def start():
 def play(attempts,length,word,user):
 	ans = word
 	guess = []
-	letter = str()
 	while(1):
 		while(attempts > 0):
 			flag = 0
