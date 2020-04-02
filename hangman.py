@@ -1,6 +1,5 @@
 import random
 
-
 def start():
 	attempts = int(input("Enter the no. of attempts needed : "))
 	f = open('dictionary.txt',mode='r')			
@@ -16,11 +15,10 @@ def start():
 	print("\nComputer is selecting a {} letter word...\n".format(length))
 	play(attempts,length,word,user)
 
-
 def play(attempts,length,word,user):
-	ans = word
 	guess = []
 	while(1):
+		count = 0
 		while(attempts > 0):
 			flag = 0
 			print(("Word : "+' '.join(user)).center(140))
@@ -40,21 +38,21 @@ def play(attempts,length,word,user):
 					user[i] = letter
 					guess.append(letter)
 					print("You guessed right..!\n".center(140))
-					word[i] = '0'
 					flag = 1
+					count += 1
 					break
 			if flag == 0:
 				guess.append(letter)
 				print("Ooops.. {} is not in the word\n".format(letter).center(140))	
 
-			if word.count('0') == len(word):
+			if count == len(word):
 				print("You've Won !! Great Job...")
 				break
 
 			if attempts == 1:
 				print("Ooops you are out of moves :(".center(140))
 				print("Better luck next time\n".center(140))
-				print("Word was : {}".format(''.join(ans)).rjust(140))
+				print("Word was : {}".format(''.join(word)).rjust(140))
 			attempts -= 1
 
 		print("Do you wish to play again?".center(140))
@@ -73,6 +71,3 @@ print('\n')
 Name = input("Enter your Name : ")
 print("{} is playing...".format(Name).rjust(140))
 start()
-
-
-
