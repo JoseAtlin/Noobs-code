@@ -1,4 +1,4 @@
-# Noobs-code
+# Python-puzzles
 A variety of algorithms to solve simple puzzles like tic tac toe, sudoku, hangman.The algorithms are based on Python.
 
 ## About
