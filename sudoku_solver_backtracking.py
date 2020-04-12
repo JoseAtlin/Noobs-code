@@ -63,7 +63,7 @@ def solve():
 
 	return False 				#returns if there is no possibility to solve the puzzle
 
-f = open('puzzle3.txt',mode='r')		#reading the input puzzle from the ".txt" file
+f = open('puzzle.txt',mode='r')			#reading the input puzzle from the ".txt" file
 array = []					
 for line in f:						
 	for num in line:
