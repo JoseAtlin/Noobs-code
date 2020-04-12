@@ -22,30 +22,22 @@ def isEmpty(l): 				#to check the spots where we need to fill numbers
 				return True
 	return False
 
-def usedRow(row,check): 			#to check if the number is anywhere in the row
-    for i in range(9): 
-        if(matrix[row][i] == check): 
-            return True
-    return False
-  
-def usedCol(col,check): 			#to check if the number is anywhere in the column
+def used(row,col,check): 			#to check if the number is anywhere in the row, coulum, or box
+    for i in range(9): 				#returns true if the numbe is found in any
+        if(matrix[row][i] == check): 		#or returns false if not found in any of the three
+            return True				#so that the number can be inserted at that position
+
     for i in range(9): 
         if(matrix[i][col] == check): 
             return True
-    return False
-  
-def usedBox(row,col,check): 			#to check if the number if anywhere in the box
-    row -= row % 3	
-    col -= col % 3
+
+    temp_row = row - row % 3	
+    temp_col = col - col % 3
     for i in range(3): 
         for j in range(3): 
-            if(matrix[i+row][j+col] == check): 
+            if(matrix[i+temp_row][j+temp_col] == check): 
                 return True
     return False
-  
-def isSafe(row,col,num): 			#checks if the element to insert is not in any of the column, row, box
-    return not usedRow(row,num) and not usedCol(col,num) and not usedBox(row,col,num) 
-  
  
 def solve(): 
 	l=[0]*2					#keep track of the row and colums of sudoku matrix
@@ -55,14 +47,14 @@ def solve():
 	row = l[0] 
 	col = l[1]
 	for put in range(1,10):			#chooses a number from 1 - 9
-		if(isSafe(row,col,put)): 
+		if(not used(row,col,put)): 
 			matrix[row][col] = put 	#puts the number that is not present in row, column, box
 			if(solve()): 	
 				return True	#moves to the next spot
-		matrix[row][col] = 0
+		matrix[row][col] = 0		#backtracking
 
-	return False 				#returns if there is no possibility to solve the puzzle
-
+	return False 				#returns if there is no possibility to solve the puzzle at that "solve()"
+						#so it goes back 1 step and check again 
 f = open('puzzle.txt',mode='r')			#reading the input puzzle from the ".txt" file
 array = []					
 for line in f:						
