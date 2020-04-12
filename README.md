@@ -14,7 +14,7 @@ Here I,ve used a  random module for the computer moves in the easy_mode, and the
 
 NumPy module helped in converting the initial array into a 9 x 9 matrix. Also the input has to be read from a file, which is provided as an example in the same.Provides an insight of “file”.
 
-Note : The Algorithm does not use backtracking, So hard_puzzles cannot be solved by this method.
+Note : Sudoku w/ backtrack solves all the puzzles while the other one is based on easy and medium type puzzles
 
 **Hangman Game** : It is a paper and pencil guessing game for two or more players. One player thinks of a word, phrase or sentence and the other(s) tries to guess it by suggesting letters within a certain number of guesses.
 
