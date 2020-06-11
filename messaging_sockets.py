@@ -68,7 +68,7 @@ def client_server(conn, addr):
                             socks.send(msg.encode('utf-8'))
                             socks.send(time.encode('utf-8'))
                 else:
-                    socks.send('3'.encode('utf-8'))                         # correct
+                    socks.send('3'.encode('utf-8'))                    
                     socks.send("Message Delivered".encode('utf-8'))
                     socks.send(time.encode('utf-8'))
 
