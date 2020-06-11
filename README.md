@@ -1,5 +1,5 @@
 # Python_Mini_Projects
-A variety of algorithms to solve simple puzzles like tic tac toe, sudoku, hangman.The algorithms are based on Python and socket programming (Server - Client).
+A variety of algorithms to solve simple puzzles like tic tac toe, sudoku, hangman.The algorithms are based on Python. Socket programming (Server - Client) basic - sending messages from clients and storing in the Server.Messaging Sockets - Messaging between clients (broadcast, personal). 
 
 ## About
 The Python files associated are created as a project model which gives a lot of experience of python syntaxes, libraries like NumPy and Random.
@@ -21,3 +21,5 @@ Note : Sudoku w/ backtrack solves all the puzzles while the other one is based o
 Using Random to choose a word from a file of words. The algorithm asks you how to proceed in the game, simple steps.
 
 **simple_server_client** : It is a basic socket programming using threads to send and recieve messages to the server. Used socket module and threading to create multiple theads / clients.
+
+**Messaging_sockets** : Socket Programming to send and retrieve messages from clients and server. #multithreading #python
