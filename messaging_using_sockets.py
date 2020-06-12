@@ -7,15 +7,15 @@ def start():
     s.listen()
     print("[LISTENING]...server : {}".format(SERVER))
     while 1:
-        conn, addr = s.accept()
-        thread = threading.Thread(target=client_server, args=(conn, addr))
+        conn, address = s.accept()
+        thread = threading.Thread(target=client_server, args=(conn, address))
         thread.start()
-        conn_ip_dict[conn] = addr
+        conn_ip_dict[conn] = address
         print("[ACTIVE CONNECTIONS] : ", len(conn_ip_dict))
 
 
-def client_server(conn, addr):
-    print("[NEW CONNECTION] : {}".format(addr))
+def client_server(conn, address):
+    print("[NEW CONNECTION] : {}".format(address))
     length = conn.recv(4).decode('utf-8')
     client = conn.recv(int(length)).decode('utf-8')
     conn_name_dict[conn] = client
@@ -33,7 +33,7 @@ def client_server(conn, addr):
             message_details.extend((sender, receiver, msg, time))
             server_messages.append(message_details)
             if msg == "DISCONNECT":
-                print("[{}] : DISCONNECTED".format(addr))
+                print("[{}] : DISCONNECTED".format(address))
                 conn.close()
                 del conn_name_dict[conn]
                 online.remove(sender)
