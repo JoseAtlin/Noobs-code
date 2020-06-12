@@ -22,4 +22,4 @@ Using Random to choose a word from a file of words. The algorithm asks you how t
 
 **simple_server_client** : It is a basic socket programming using threads to send and recieve messages to the server. Used socket module and threading to create multiple theads / clients.
 
-**Messaging_sockets** : Socket Programming to send and retrieve messages from clients and server. #multithreading #python
+**Messaging_using_sockets** : Socket Programming to send and retrieve messages from clients and server. #multithreading #python
