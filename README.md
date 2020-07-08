@@ -19,7 +19,3 @@ Note : Sudoku w/ backtrack solves all the puzzles while the other one is based o
 **Hangman Game** : It is a paper and pencil guessing game for two or more players. One player thinks of a word, phrase or sentence and the other(s) tries to guess it by suggesting letters within a certain number of guesses.
 
 Using Random to choose a word from a file of words. The algorithm asks you how to proceed in the game, simple steps.
-
-**simple_server_client** : It is a basic socket programming using threads to send and recieve messages to the server. Used socket module and threading to create multiple theads / clients.
-
-**Messaging_using_sockets** : Socket Programming to send and retrieve messages from clients and server. #multithreading #python
