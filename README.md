@@ -1,4 +1,4 @@
-# Python_Mini_Projects
+# Python_Mini_Games
 A variety of algorithms to solve simple puzzles like tic tac toe, sudoku, hangman.The algorithms are based on Python. Socket programming (Server - Client) basic - sending messages from clients and storing in the Server.Messaging Sockets - Messaging between clients (broadcast, personal). 
 
 ## About
