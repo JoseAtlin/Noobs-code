@@ -16,7 +16,6 @@ def start():
 	user = ['_']*length
 	print("\nComputer is selecting a {} letter word...\n".format(length))
 	play(attempts,length,word,user)
-
 def play(attempts,length,word,user):
 	guess = []
 	symbols = ['!','@','#','$','%','^','&','*','(',')','_','-','+','=','/','`','~']
